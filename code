@@ -1,0 +1,25 @@
+class GivenNumberIsArmstrongOrNot
+{
+	public static void main(String args [])
+	{
+		int num = 153,back,rem,sumofcubes=0;
+		back= num;
+		while(back > 0)
+		{
+			rem = back % 10;
+			back = back / 10;
+			sumofcubes = sumofcubes + rem *rem * rem;
+		}
+		System.out.print("\n\nSum of Cubes of Each Digit = " + sumofcubes);
+
+		if(num == sumofcubes)
+		{
+			System.out.print("\n\nGiven Number Is Armstrong");
+		}
+		else
+		{
+			System.out.print("\n\nGiven Number is Not Armstrong");
+		}
+		System.out.print("\n\n");
+	}
+}
